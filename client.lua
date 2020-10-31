@@ -18,8 +18,12 @@ local image = Instance.new("ImageLabel")
 local ChannelID = Instance.new("TextBox")
 local image_2 = Instance.new("ImageLabel")
 local Connect_2 = Instance.new("TextButton")
+local UserID = Instance.new("TextBox")
+local image_3 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Gray = Instance.new("ImageLabel")
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
 
 Main.Name = "Main"
 Main.Parent = ScreenGui
@@ -46,7 +50,6 @@ Messages.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 Messages.BorderSizePixel = 0
 Messages.Position = UDim2.new(0, 0, 0.103448279, 0)
 Messages.Size = UDim2.new(0, 561, 0, 270)
-Messages.CanvasPosition = Vector2.new(0, 423.422211)
 
 UIListLayout.Parent = Messages
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -126,8 +129,8 @@ Connect.Parent = ScreenGui
 Connect.AnchorPoint = Vector2.new(0.5, 0.5)
 Connect.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
 Connect.BorderSizePixel = 0
-Connect.Position = UDim2.new(0.5, 0, 0.5, 0)
-Connect.Size = UDim2.new(0, 407, 0, 354)
+Connect.Position = UDim2.new(0.5, 0, 0.392009974, 0)
+Connect.Size = UDim2.new(0, 407, 0, 425)
 
 Title_2.Name = "Title"
 Title_2.Parent = Connect
@@ -145,7 +148,7 @@ ServerID.Parent = Connect
 ServerID.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 ServerID.BackgroundTransparency = 1.000
 ServerID.BorderSizePixel = 0
-ServerID.Position = UDim2.new(0.117936119, 0, 0.23446326, 0)
+ServerID.Position = UDim2.new(0.117936119, 0, 0.171269968, 0)
 ServerID.Size = UDim2.new(0, 311, 0, 50)
 ServerID.ZIndex = 2
 ServerID.Font = Enum.Font.Code
@@ -175,7 +178,7 @@ ChannelID.Parent = Connect
 ChannelID.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 ChannelID.BackgroundTransparency = 1.000
 ChannelID.BorderSizePixel = 0
-ChannelID.Position = UDim2.new(0.117936119, 0, 0.440677941, 0)
+ChannelID.Position = UDim2.new(0.117936119, 0, 0.303955257, 0)
 ChannelID.Size = UDim2.new(0, 311, 0, 50)
 ChannelID.ZIndex = 2
 ChannelID.Font = Enum.Font.Code
@@ -204,14 +207,70 @@ Connect_2.Name = "Connect"
 Connect_2.Parent = Connect
 Connect_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 Connect_2.BorderSizePixel = 0
-Connect_2.Position = UDim2.new(0.0761670768, 0, 0.725988686, 0)
+Connect_2.Position = UDim2.new(0.0835380852, 0, 0.831030726, 0)
 Connect_2.Size = UDim2.new(0, 339, 0, 50)
 Connect_2.Font = Enum.Font.Code
 Connect_2.Text = "Connect"
 Connect_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Connect_2.TextSize = 14.000
 
-local function QHZMGSN_fake_script()
+UserID.Name = "UserID"
+UserID.Parent = Connect
+UserID.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+UserID.BackgroundTransparency = 1.000
+UserID.BorderSizePixel = 0
+UserID.Position = UDim2.new(0.12039312, 0, 0.57580781, 0)
+UserID.Size = UDim2.new(0, 311, 0, 50)
+UserID.ZIndex = 3
+UserID.Font = Enum.Font.Code
+UserID.PlaceholderText = "User ID"
+UserID.Text = ""
+UserID.TextColor3 = Color3.fromRGB(222, 222, 222)
+UserID.TextSize = 14.000
+UserID.TextWrapped = true
+
+image_3.Name = "image"
+image_3.Parent = UserID
+image_3.Active = true
+image_3.AnchorPoint = Vector2.new(0.5, 0.5)
+image_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+image_3.BackgroundTransparency = 1.000
+image_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+image_3.Selectable = true
+image_3.Size = UDim2.new(1, 0, 1, 0)
+image_3.ZIndex = 2
+image_3.Image = "rbxassetid://3570695787"
+image_3.ImageColor3 = Color3.fromRGB(24, 24, 24)
+image_3.ScaleType = Enum.ScaleType.Slice
+image_3.SliceCenter = Rect.new(100, 100, 100, 100)
+image_3.SliceScale = 0.040
+
+TextLabel.Parent = Connect
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.255528241, 0, 0.441008419, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "For DM's leave Server ID and Channel ID blank if using."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 12.000
+
+Gray.Name = "Gray"
+Gray.Parent = Connect
+Gray.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Gray.BackgroundTransparency = 1.000
+Gray.Position = UDim2.new(0.0663390607, 0, 0.456470609, 0)
+Gray.Size = UDim2.new(0, 353, 0, 116)
+Gray.Image = "rbxassetid://3570695787"
+Gray.ImageColor3 = Color3.fromRGB(27, 27, 27)
+Gray.ScaleType = Enum.ScaleType.Slice
+Gray.SliceCenter = Rect.new(100, 100, 100, 100)
+Gray.SliceScale = 0.167
+
+-- Scripts:
+
+local function WJJOJFQ_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local Messages = script.Parent.Messages
@@ -224,6 +283,7 @@ local function QHZMGSN_fake_script()
 			return _G
 		end
 	end
+	
 	
 	script.Parent.Active = true
 	script.Parent.Draggable = true
@@ -260,6 +320,12 @@ local function QHZMGSN_fake_script()
 	disconnect.MouseButton1Click:Connect(function()
 		getgenv().ServerID = nil
 		getgenv().ChannelID = nil
+		getgenv().UserID = nil
+		
+		script.Parent.Parent.Connect.ServerID.Text = ''
+		script.Parent.Parent.Connect["UserID"].Text = ''
+		script.Parent.Parent.Connect.ChannelID.Text = ''
+		
 		script.Parent.Visible = false
 		script.Parent.Parent.Connect.Visible = true
 		getgenv().Connected = false
@@ -271,11 +337,22 @@ local function QHZMGSN_fake_script()
 		mymessage.Text = 'Sending..'
 		mymessage.ClearTextOnFocus = false
 		mymessage.TextEditable = false
+		
+		local typeofmessage
+		
+		if getgenv().UserID ~= nil and getgenv().UserID ~= '' then
+			typeofmessage = 'DM'
+		else
+			typeofmessage = 'Server'
+		end
+		
 		ws:Send(json_encode({
 			['Action'] = 'Send-Message',
 			['ServerId'] = getgenv().ServerID,
 			['ChannelId'] = getgenv().ChannelID,
-			['Content'] = message
+			['UserId'] = getgenv().UserID,
+			['Content'] = message,
+			['Type'] = typeofmessage
 		}))
 		mymessage.Text = ''
 		mymessage.ClearTextOnFocus = true
@@ -300,13 +377,14 @@ local function QHZMGSN_fake_script()
 		wait(2)
 	end
 end
-coroutine.wrap(QHZMGSN_fake_script)()
-local function ZKOA_fake_script() -- Connect.LocalScript 
+coroutine.wrap(WJJOJFQ_fake_script)()
+local function CURDJP_fake_script() -- Connect.LocalScript 
 	local script = Instance.new('LocalScript', Connect)
 
 	local connect = script.Parent.Connect
 	local serverid = script.Parent.ServerID
 	local channelid = script.Parent.ChannelID
+	local userid = script.Parent.UserID
 	
 	script.Parent.Active = true
 	script.Parent.Draggable = true
@@ -314,9 +392,12 @@ local function ZKOA_fake_script() -- Connect.LocalScript
 	connect.MouseButton1Click:Connect(function()
 		local sid = serverid.Text
 		local cid = channelid.Text
+		local uid = userid.Text
+		
 		
 		getgenv().ServerID = sid
 		getgenv().ChannelID = cid
+		getgenv().UserID = uid
 		
 		script.Parent.Visible = false
 		script.Parent.Parent.Main.Visible = true
@@ -324,8 +405,8 @@ local function ZKOA_fake_script() -- Connect.LocalScript
 		getgenv().Connected = true
 	end)
 end
-coroutine.wrap(ZKOA_fake_script)()
-local function YLQFQV_fake_script()
+coroutine.wrap(CURDJP_fake_script)()
+local function XNQMO_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local visible = false
@@ -343,4 +424,4 @@ local function YLQFQV_fake_script()
 		end
 	end)
 end
-coroutine.wrap(YLQFQV_fake_script)()
+coroutine.wrap(XNQMO_fake_script)()
