@@ -1,0 +1,2 @@
+selfbot.js
+ws
