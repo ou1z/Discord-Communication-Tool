@@ -1,3 +1,5 @@
+local PORT = 3000
+
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -243,7 +245,7 @@ local function QHZMGSN_fake_script()
 		return game:GetService('HttpService'):JSONEncode(tbl)
 	end
 	
-	local ws = syn.websocket.connect('ws://localhost:3000')
+	local ws = syn.websocket.connect('ws://localhost:'..tostring(PORT))
 	
 	ws.OnMessage:Connect(function(msg)
 		local tbl = json_decode(msg)
