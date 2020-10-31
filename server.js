@@ -15,8 +15,7 @@ let LogChannelID
 
 bot.on('message', (msg) => {
     let json = JSON.stringify({author: msg.author.username, message: msg.content})
-    console.log(msg.channel.id)
-    console.log(LogChannelID)
+    
     if(msg.channel.id != LogChannelID && msg.channel.type != 'dm') return
 
     server.clients.forEach(client => {
