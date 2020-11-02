@@ -33,6 +33,10 @@ server.on('connection', (client) => {
         }
         else if(obj['Action'] === 'Send-Message') {
             let msg = obj['Content']
+               
+            if (msg === '') msg = 'Empty Message';
+      
+            
             let server = obj['ServerId']
             let channel = obj['ChannelId']
             let userid = obj['UserId']
