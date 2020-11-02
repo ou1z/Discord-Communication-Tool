@@ -335,7 +335,7 @@ local function WJJOJFQ_fake_script() -- Main.LocalScript
 	local function sendMessage()
 		local message = mymessage.Text
 		
-		if message:sub(1,1) == ' ' then return end
+		if message:sub(1,1) == ' ' or message:sub(1,1) == '' or message == '' then return end
 		
 		mymessage.Text = 'Sending..'
 		mymessage.ClearTextOnFocus = false
